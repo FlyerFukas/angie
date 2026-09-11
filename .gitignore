@@ -1,0 +1,43 @@
+# --- Gizlilik: kisisel kimlik ve baglanti referanslari repoya GIRMEZ ---
+# Uretilen workflow dosyalari icinde Telegram kullanici kimligi, takvim
+# adresi ve n8n baglanti kimlikleri bulunur. Kaynak scripts/uret-angie.py,
+# cikti buraya uretilir.
+workflows/*.json
+
+# --- API anahtarlari (asla commit etme) ---
+# Angie hicbir anahtari dosyada tutmaz; hepsi n8n'in sifreli veritabaninda
+# (~/.n8n) durur. Yine de kaza ihtimaline karsi:
+.env
+.env.*
+credentials.json
+*.key
+*.pem
+
+# --- n8n veritabani ve kurulumu ---
+node_modules/
+.n8n/
+*.sqlite
+*.sqlite-shm
+*.sqlite-wal
+
+# --- indirilen ikili dosyalar ---
+# cloudflared kurulum sirasinda indirilir (~50 MB)
+bin/
+
+# --- kayitlar ---
+*.log
+
+# --- kisiye ozel notlar ---
+COWORK-PROMPT.md
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# --- Editor / OS ---
+.vscode/
+.idea/
+Thumbs.db
+desktop.ini

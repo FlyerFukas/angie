@@ -1,0 +1,16 @@
+{
+  "name": "angie",
+  "version": "1.0.0",
+  "description": "n8n üzerinde çalışan kişisel AI asistanı. Telegram'dan yazı veya sesli mesaj gönderirsin; Angie takvimine, mailine, görev ve kişi listene bakıp Türkçe cevap verir.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "n8n": "^2.30.7"
+  }
+}
