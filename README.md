@@ -2,7 +2,7 @@
 
 **A Turkish-speaking personal assistant that lives in Telegram.** Ask it what is
 on your calendar, have it summarize your inbox, add a task, look up a phone
-number — in plain Turkish, from your phone. It runs on your own machine as an
+number in plain Turkish, from your phone. It runs on your own machine as an
 n8n workflow, with Claude as the reasoning engine.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
@@ -46,7 +46,7 @@ Telegram  ◄────────────  reply, split into 4096-char c
 ```
 
 Everything except the model call and the Google APIs stays on your machine.
-Tasks and contacts live in n8n data tables — no external database, no Airtable
+Tasks and contacts live in n8n data tables no external database, no Airtable
 or Baserow account.
 
 ## Requirements
@@ -159,7 +159,7 @@ Angie/
 ```
 
 The workflow JSON is a build artifact. Change `scripts/uret-angie.py`, run it,
-then run `yayinla.ps1` — editing the JSON by hand gets overwritten.
+then run `yayinla.ps1` editing the JSON by hand gets overwritten.
 
 ## Limits
 
@@ -175,9 +175,9 @@ then run `yayinla.ps1` — editing the JSON by hand gets overwritten.
 
 ## Security
 
-Credentials never touch this repository — see [SECURITY.md](SECURITY.md) for
+Credentials never touch this repository see [SECURITY.md](SECURITY.md) for
 where they live, what the tunnel exposes, and how the identity lock works.
 
 ## License
 
-MIT — see [LICENSE](LICENSE).
+MIT see [LICENSE](LICENSE).
