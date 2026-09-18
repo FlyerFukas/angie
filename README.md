@@ -2,15 +2,19 @@
 
 **A Turkish-speaking personal assistant that lives in Telegram.** Ask it what is
 on your calendar, have it summarize your inbox, add a task, look up a phone
-number in plain Turkish, from your phone. It runs on your own machine as an
+number, in plain Turkish, from your phone. It runs on your own machine as an
 n8n workflow, with Claude as the reasoning engine.
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![License: PolyForm Noncommercial](https://img.shields.io/badge/License-PolyForm%20Noncommercial-orange.svg)](LICENSE)
+[![Commercial use: license required](https://img.shields.io/badge/Commercial%20use-license%20required-critical.svg)](COMMERCIAL.md)
 [![n8n](https://img.shields.io/badge/n8n-2.30.7-EA4B71?logo=n8n&logoColor=white)](https://n8n.io/)
 [![Claude](https://img.shields.io/badge/Claude-Sonnet%205-D97757)](https://www.anthropic.com/)
 [![Platform](https://img.shields.io/badge/Platform-Windows-lightgrey)](#setup)
 
 > 🇹🇷 Türkçe sürüm: [README.tr.md](README.tr.md)
+>
+> **License:** free for personal and other noncommercial use. Business and
+> commercial use requires a separate paid license → [COMMERCIAL.md](COMMERCIAL.md)
 
 ---
 
@@ -46,7 +50,7 @@ Telegram  ◄────────────  reply, split into 4096-char c
 ```
 
 Everything except the model call and the Google APIs stays on your machine.
-Tasks and contacts live in n8n data tables no external database, no Airtable
+Tasks and contacts live in n8n data tables: no external database, no Airtable
 or Baserow account.
 
 ## Requirements
@@ -122,7 +126,7 @@ cost real hours to find:
    after importing.
 4. **Imported JSON needs an `id` field**, otherwise SQLite rejects it with a NOT
    NULL constraint error.
-5. **Webhook registration lands 10–30 seconds after startup.** A `/healthz` 200
+5. **Webhook registration lands 10-30 seconds after startup.** A `/healthz` 200
    does not mean the webhook path answers yet.
 6. **CLI commands clash with a running n8n** over task broker port 5679. Give
    them `N8N_RUNNERS_BROKER_PORT=5680`.
@@ -159,7 +163,7 @@ Angie/
 ```
 
 The workflow JSON is a build artifact. Change `scripts/uret-angie.py`, run it,
-then run `yayinla.ps1` editing the JSON by hand gets overwritten.
+then run `yayinla.ps1`. Editing the JSON by hand gets overwritten.
 
 ## Limits
 
@@ -175,9 +179,26 @@ then run `yayinla.ps1` editing the JSON by hand gets overwritten.
 
 ## Security
 
-Credentials never touch this repository see [SECURITY.md](SECURITY.md) for
+Credentials never touch this repository. See [SECURITY.md](SECURITY.md) for
 where they live, what the tunnel exposes, and how the identity lock works.
 
 ## License
 
-MIT see [LICENSE](LICENSE).
+Angie is dual-licensed.
+
+**Noncommercial use is free** under the
+[PolyForm Noncommercial License 1.0.0](LICENSE): personal use, hobby projects,
+study, research, educational institutions, government bodies and charities. No
+permission needed, no notification. Just keep the license and the copyright
+notice with the software if you pass it on.
+
+**Commercial use requires a separate paid license.** Running Angie inside a
+business, setting it up for a client, embedding it in a product or service, or
+reselling it in any form needs written permission first. Terms, the available
+license shapes and contact details are in [COMMERCIAL.md](COMMERCIAL.md).
+Pricing is negotiable, discounts exist for small teams, and the architecture can
+also be bought outright.
+
+The repository being public does not make the software free to commercialize.
+If you are unsure whether your case counts as commercial, ask. Answering is
+free and quick.

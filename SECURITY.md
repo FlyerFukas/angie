@@ -32,7 +32,7 @@ If you fork this project you use **your own** bot, **your own** API keys and
 
 Telegram delivers messages over a webhook, so n8n has to be reachable from the
 internet. The setup here uses a Cloudflare quick tunnel, and that tunnel
-forwards **every** path, not just the webhook — including the n8n sign-in page.
+forwards **every** path, not just the webhook, including the n8n sign-in page.
 
 Practical consequences:
 
@@ -51,7 +51,7 @@ everyone else. Leave that value empty on first run and the bot replies with your
 own Telegram ID so you can lock it down.
 
 If a token leaks, revoke it through BotFather with `/revoke` and create a new
-one — the old token stops working immediately.
+one. The old token stops working immediately.
 
 ## Your data stays on your machine
 

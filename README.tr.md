@@ -1,11 +1,14 @@
 # Angie (Türkçe)
 
 **Telegram'da yaşayan Türkçe kişisel asistan.** Takviminde ne olduğunu sor,
-maillerini özetlet, görev ekle, bir telefon numarası bul — hepsi düz Türkçe,
+maillerini özetlet, görev ekle, bir telefon numarası bul; hepsi düz Türkçe,
 telefonundan. Kendi bilgisayarında bir n8n workflow'u olarak çalışır, düşünme
 işini Claude yapar.
 
 > English version: [README.md](README.md)
+>
+> **Lisans:** Kişisel kullanım ücretsiz. Ticari ve işletme kullanımı ayrı,
+> ücretli lisans gerektirir → [COMMERCIAL.md](COMMERCIAL.md)
 
 ---
 
@@ -41,7 +44,7 @@ Telegram  ◄───────────  cevap, 4096 karakterlik parçala
 ```
 
 Model çağrısı ve Google API'leri dışında her şey senin makinende kalır.
-Görevler ve kişiler n8n'in kendi data table'larında durur — harici veritabanı,
+Görevler ve kişiler n8n'in kendi data table'larında durur; harici veritabanı,
 Airtable ya da Baserow hesabı gerekmez.
 
 ## Gerekenler
@@ -117,7 +120,7 @@ burada yazılı, çünkü bulmaları gerçekten saat aldı:
    mutlaka tekrar yayınla.
 4. **İçeri aktarılan JSON'da `id` alanı zorunlu**, yoksa SQLite NOT NULL
    kısıtıyla reddediyor.
-5. **Webhook kaydı başlangıçtan 10–30 saniye sonra oluşuyor.** `/healthz` 200
+5. **Webhook kaydı başlangıçtan 10-30 saniye sonra oluşuyor.** `/healthz` 200
    dönmesi webhook adresinin cevap verdiği anlamına gelmiyor.
 6. **CLI komutları çalışan n8n ile çakışıyor** (task broker portu 5679).
    `N8N_RUNNERS_BROKER_PORT=5680` ile çalıştır.
@@ -155,7 +158,7 @@ Angie/
 ```
 
 Workflow JSON'u bir çıktı dosyası. `scripts/uret-angie.py` içinde değiştir,
-çalıştır, sonra `yayinla.ps1` çalıştır — JSON'u elle düzenlersen üzerine yazılır.
+çalıştır, sonra `yayinla.ps1` çalıştır. JSON'u elle düzenlersen üzerine yazılır.
 
 ## Sınırlar
 
@@ -171,9 +174,27 @@ Workflow JSON'u bir çıktı dosyası. `scripts/uret-angie.py` içinde değişti
 
 ## Güvenlik
 
-Anahtarlar bu depoya hiç girmiyor — nerede durdukları, tünelin neyi açtığı ve
+Anahtarlar bu depoya hiç girmiyor. Nerede durdukları, tünelin neyi açtığı ve
 kimlik kilidinin nasıl çalıştığı için [SECURITY.md](SECURITY.md) dosyasına bak.
 
 ## Lisans
 
-MIT — [LICENSE](LICENSE) dosyasına bak.
+Angie çift lisanslıdır.
+
+**Ticari olmayan kullanım ücretsizdir.**
+[PolyForm Noncommercial License 1.0.0](LICENSE) kapsamında kişisel kullanım,
+hobi projeleri, öğrenme, akademik araştırma, eğitim kurumları, kamu kurumları ve
+hayır kurumları serbesttir. İzin almanıza da bildirimde bulunmanıza da gerek
+yok; tek yükümlülüğünüz, yazılımı başkasına verirken lisans metnini ve telif
+bildirimini birlikte vermeniz.
+
+**Ticari kullanım ayrı ve ücretli bir lisans gerektirir.** Angie'yi bir
+işletmenin operasyonunda çalıştırmak, bir müşteri için kurmak, bir ürüne ya da
+hizmete gömmek veya herhangi bir biçimde yeniden satmak önceden yazılı izin
+ister. Koşullar, lisans biçimleri ve iletişim
+[COMMERCIAL.md](COMMERCIAL.md) dosyasında. Fiyat pazarlığa açıktır, küçük
+ekipler için indirimli koşullar mümkündür, mimarinin tamamı da satın alınabilir.
+
+Deponun herkese açık olması, yazılımın serbestçe ticarileştirilebileceği
+anlamına gelmez. Kullanımınızın ticari sayılıp sayılmadığından emin değilseniz
+sorun. Cevap vermek hem hızlı hem ücretsiz.
