@@ -12,9 +12,19 @@ n8n workflow, with Claude as the reasoning engine.
 [![Platform](https://img.shields.io/badge/Platform-Windows-lightgrey)](#setup)
 
 > 🇹🇷 Türkçe sürüm: [README.tr.md](README.tr.md)
->
-> **License:** free for personal and other noncommercial use. Business and
-> commercial use requires a separate paid license → [COMMERCIAL.md](COMMERCIAL.md)
+
+**Result:** the n8n template it started from breaks on n8n 2.x. Angie runs on
+2.30.7 and documents the ten n8n behaviours that caused the breakage, plus four
+bugs carried over from the template (shared memory across chats, a dropped
+session ID in the voice branch, replies over 4,096 characters, photos crashing
+the voice check). See [What this project documents](#what-this-project-documents).
+
+```
+Angie-Baslat.cmd    # after the one-time setup below: starts the tunnel and n8n at http://localhost:5678
+```
+
+> Source-available: free for noncommercial use (PolyForm Noncommercial 1.0.0);
+> commercial use requires a licence, see [COMMERCIAL.md](COMMERCIAL.md).
 
 ---
 
