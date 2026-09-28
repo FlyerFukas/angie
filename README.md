@@ -14,7 +14,7 @@ n8n workflow, with Claude as the reasoning engine.
 > 🇹🇷 Türkçe sürüm: [README.tr.md](README.tr.md)
 
 **Result:** the n8n template it started from breaks on n8n 2.x. Angie runs on
-2.30.7 and documents the ten n8n behaviours that caused the breakage, plus four
+2.30.7 and documents ten n8n 2.x pitfalls found while fixing it, plus four
 bugs carried over from the template (shared memory across chats, a dropped
 session ID in the voice branch, replies over 4,096 characters, photos crashing
 the voice check). See [What this project documents](#what-this-project-documents).
