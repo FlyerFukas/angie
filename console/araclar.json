@@ -1,0 +1,35 @@
+[
+  {"name": "gorevleri_getir",
+   "description": "Kullanıcının görev listesindeki tüm görevleri getirir. Görevlerle ilgili her soruda önce bunu çağır.",
+   "input_schema": {"type": "object", "properties": {}}},
+  {"name": "gorev_ekle",
+   "description": "Görev listesine yeni görev ekler. durum alanına bekliyor yaz.",
+   "input_schema": {"type": "object", "required": ["baslik", "durum"], "properties": {
+     "baslik": {"type": "string", "description": "Görevin kısa başlığı"},
+     "durum": {"type": "string", "enum": ["bekliyor", "tamamlandi"]},
+     "oncelik": {"type": "string", "enum": ["dusuk", "orta", "yuksek"]},
+     "son_tarih": {"type": "string", "description": "YYYY-MM-DD, yoksa boş"},
+     "notlar": {"type": "string"}}}},
+  {"name": "gorev_guncelle",
+   "description": "Var olan görevi tam başlığına göre bulup durumunu günceller. Önce gorevleri_getir ile tam başlığı öğren.",
+   "input_schema": {"type": "object", "required": ["baslik", "durum"], "properties": {
+     "baslik": {"type": "string"},
+     "durum": {"type": "string", "enum": ["bekliyor", "tamamlandi"]}}}},
+  {"name": "kisileri_getir",
+   "description": "Kayıtlı kişilerin iletişim bilgilerini (e-posta, telefon, kurum) getirir.",
+   "input_schema": {"type": "object", "properties": {}}},
+  {"name": "kisi_ekle",
+   "description": "Kişi rehberine yeni kişi ekler.",
+   "input_schema": {"type": "object", "required": ["ad"], "properties": {
+     "ad": {"type": "string"}, "eposta": {"type": "string"}, "telefon": {"type": "string"},
+     "kurum": {"type": "string"}, "notlar": {"type": "string"}}}},
+  {"name": "takvim",
+   "description": "Google Takvim etkinliklerini belirtilen aralıkta getirir.",
+   "input_schema": {"type": "object", "required": ["baslangic", "bitis"], "properties": {
+     "baslangic": {"type": "string", "description": "ISO 8601: YYYY-MM-DDTHH:mm:ss"},
+     "bitis": {"type": "string", "description": "ISO 8601: YYYY-MM-DDTHH:mm:ss"}}}},
+  {"name": "gmail",
+   "description": "Gmail kutusundaki mailleri Gmail arama sorgusuyla getirir.",
+   "input_schema": {"type": "object", "required": ["arama"], "properties": {
+     "arama": {"type": "string", "description": "Örnek: newer_than:1d -category:promotions"}}}}
+]
